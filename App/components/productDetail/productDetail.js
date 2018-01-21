@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 class ProductDetail extends Component {
-	render() {
-		return (
-			<View>
-				<Text>
-					Product detail
+  render() {
+    return (
+      <View>
+        <Text>
+          Product detail
         </Text>
-			</View>
-		);
-	}
+      </View>
+    );
+  }
 }
 
 export default ProductDetail;
