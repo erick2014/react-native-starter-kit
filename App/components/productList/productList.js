@@ -1,15 +1,24 @@
+//dependencies
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+//react native components
 import {
   Text,
   View,
   StyleSheet,
   Button
 } from 'react-native';
+//redux actions
+import { shoppingCartActions } from '../../actions/shoppingCartActions';
 
 class ProductList extends Component {
 
   static navigationOptions = {
     title: 'Products List'
+  }
+
+  componentDidMount() {
+    this.props.fetchProducts();
   }
 
   render() {
@@ -37,4 +46,11 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ProductList;
+export default connect(
+  //map props
+  state => ({ shoppingCart: state.shoppingCart }),
+  //map actions
+  {
+    fetchProducts: shoppingCartActions.fetchProducts
+  }
+)(ProductList);
