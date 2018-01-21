@@ -1,4 +1,4 @@
-import RootNavigator from '../components/rootNavigator/rootNavigator';
+import RootNavigator from '../reactNavigation/rootNavigator';
 
 const initialState = RootNavigator.router.getStateForAction(RootNavigator.router.getActionForPathAndParams('products'));
 

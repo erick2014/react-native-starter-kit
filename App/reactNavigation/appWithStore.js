@@ -5,7 +5,7 @@ import { Provider, connect } from 'react-redux';
 //navigator component
 import RootNavigator from './rootNavigator';
 //import all reducers as one(because we are combining them in the file)
-import appReducer from '../../reducers';
+import appReducer from '../reducers';
 
 //app with navigation included
 class AppWithNavigation extends Component {
